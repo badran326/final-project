@@ -40,7 +40,7 @@ h1, h2, h3 {
     color: var(--secondary-color);
     margin-bottom: 0.8em;
     text-shadow: 2px 2px 2px var(--shadow-color);
-    font-size: 3.6rem;
+    font-size: 2.6rem;
     font-family: "LocalFont", cursive;
     font-style: normal;
 }
@@ -529,8 +529,10 @@ li {
         }
 
         .race__item {
-            width: 80%;
+            width: 100%;
+            min-height: 100%;
             display: grid;
+            align-items: center;
             grid-template-columns: repeat(3, 1fr);
             background-color: var(--primary-color);
             padding: 1.2em;
@@ -541,15 +543,21 @@ li {
                 width: 100%;
                 overflow: hidden;
                 height: auto;
-                display: inline;
+                justify-content: center;
                 grid-column: 1 / 4;
                 grid-row: 1/ 2;
-                justify-content: center;
-                align-items: center;
+
+            }
+
+            #video, #georgina {
+                width: 80%;
+                height: fit-content;
+                margin: auto;
             }
 
             &:hover {
                 .race__details{
+                    height: 100%;
                     transform: scaleX(1);
                     transition: 0.3s ease;
                 }
@@ -563,12 +571,18 @@ li {
                 grid-column: 1 / 4;
                 grid-row: 1/ 2;
                 text-align: center;
+                font-size: 1.2rem;
                 z-index: 2;
                 padding: 1.2em;
 
+                h3 {
+                    font-size: 1.4rem;
+                    margin-bottom: 0.6em;
+                }
+
                 .race__info {
                     width: 100%;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     font-weight: 400;
                     ul {
                         display: flex;
@@ -590,8 +604,10 @@ li {
                     button {
                         background-color: #4169E1;
                         border: none;
+                        font-size: 1rem;
                         border-radius: 18px;
                         padding: 0.8em;
+                        margin-top: 0.8em;
                     }
                 }
                 
@@ -616,7 +632,7 @@ li {
     width: 80%;
     margin: 6.4em auto;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto-fill);
+    grid-template-rows: repeat(2, auto);
     animation-name: slid-in-bottom;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -1099,16 +1115,12 @@ footer {
 
                 .race__details {
                     .race__description{
-                        h3 {
-                            font-size: 2rem;
-                            margin-bottom: 0.6em;
-                        }
                         p{
                             font-size: 1rem;
                         }
                     }
                     .race__info {
-                        font-size: 1rem !important;
+                        font-size: 1rem;
                     }
                     .race__web {
                         button {
