@@ -710,6 +710,7 @@ li {
                 width: 60%;
                 height: auto;
                 border-radius: 50%;
+                box-shadow: 0 4px 8px var(--shadow-color);
             }
 
             p {
